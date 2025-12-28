@@ -15,7 +15,7 @@ body {
       rgba(5, 8, 22, 0.92),
       rgba(5, 8, 22, 0.98)
     ),
-    url("portfolio/images/education-bg.jpg");
+    url("portfolio/education-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
