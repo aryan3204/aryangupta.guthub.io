@@ -31,7 +31,7 @@ body {
       rgba(5, 8, 22, 0.85),
       rgba(5, 8, 22, 0.95)
     ),
-    url("portfolio/images/hero-bg.jpg"); /* change path if needed */
+    url("portfolio/hero-bg.jpg"); /* change path if needed */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
