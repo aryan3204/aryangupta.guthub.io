@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aryan Gupta | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <!-- HERO + SUMMARY -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-left">
+        <!-- change path to your actual profile image -->
+        <img src="portfolio/images/profile.jpg" alt="Aryan Gupta" class="profile-pic-large" />
+      </div>
+
+      <div class="hero-right">
+        <h1>Aryan Gupta</h1>
+        <p class="tagline">
+          B.Tech Student | Aspiring Oracle CPQ Consultant | Event Manager &amp; Financial Strategist
+        </p>
+
+        <section class="summary">
+          <h2>Summary</h2>
+          <p>
+            Tech-focused professional aiming for analyst and implementation roles that blend strong technical foundations with hands-on management experience. Skilled in coordinating projects, leading teams, and handling operations while working closely with engineering and product stakeholders to turn requirements into scalable solutions rather than frontline sales work. Interested in roles where technology, process improvement, and strategic decision-making come together to deliver measurable business impact.​
+          </p>
+        </section>
+
+        <section class="languages">
+          <h2>Languages</h2>
+          <p>English · Hindi · French</p>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV BOXES TO OTHER PAGES -->
+  <main>
+    <div class="container">
+      <section id="nav-boxes" class="reveal">
+        <div class="box-grid">
+          <a href="education.html" class="nav-box">Education</a>
+          <a href="experience.html" class="nav-box">Experience</a>
+          <a href="leadership.html" class="nav-box">Leadership &amp; Initiatives</a>
+          <a href="projects.html" class="nav-box">Projects</a>
+          <a href="achievements.html" class="nav-box">Achievements</a>
+          <a href="skills.html" class="nav-box">Skills</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CONTACT FOOTER WITH ICONS -->
+  <footer>
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <p class="footer-name">Aryan Gupta</p>
+        <p class="footer-tagline">Analyst blending management insight with strong tech skills to turn data into decisive actions.​</p>
+        <p class="footer-address">
+          128/212, 213 H-2 Block, Kidwai Nagar, Kanpur (208011)
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <a href="tel:+918299042930" class="footer-link footer-phone">
+          <span class="icon">☎</span>
+          <span>+91-8299042930</span>
+        </a>
+        <a href="mailto:g.aryan4199@gmail.com" class="footer-link footer-mail">
+          <span class="icon">✉</span>
+          <span>g.aryan4199@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/aryan-gupta-3204f" target="_blank" class="footer-link footer-linkedin">
+          <span class="icon">in</span>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/aryan3204" target="_blank" class="footer-link footer-github">
+          <span class="icon">🐱</span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="footer-copy">© 2025 Aryan Gupta</p>
+  </footer>
+
+  <!-- Scroll reveal for boxes -->
+  <script>
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

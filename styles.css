@@ -1,0 +1,224 @@
+/* ========== RESET ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== BASE ========== */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050816;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ========== HERO (TOP SECTION) ========== */
+
+.hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid #111827;
+  background-image: linear-gradient(
+      rgba(5, 8, 22, 0.85),
+      rgba(5, 8, 22, 0.95)
+    ),
+    url("portfolio/images/hero-bg.jpg"); /* change path if needed */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic-large {
+  width: 180px;
+  height: 180px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+.hero-right h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  color: #e5e7eb;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.summary h2,
+.languages h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.summary p,
+.languages p {
+  color: #e5e7eb;
+  margin-bottom: 0.8rem;
+}
+
+/* ========== GLASSY MAIN (DARK BLUE, BLURRY, WHITE TEXT) ========== */
+
+main {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(2, 6, 23, 0.55); /* translucent dark blue over hero image */
+}
+
+/* ========== NAV BOX GRID ========== */
+
+#nav-boxes {
+  margin: 2.5rem 0 1.5rem;
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem 1.2rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.55); /* dark blue glass */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+    border-color 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.nav-box:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* ========== FOOTER (WHITE TEXT, BLURRY DARK BLUE) ========== */
+
+footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.85);
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 1.8rem 0 1.2rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.footer-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-tagline,
+.footer-address {
+  color: #e5e7eb;
+}
+
+/* Footer links with icons */
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-link .icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.8rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #e5e7eb;
+}
+
+/* ========== SCROLL REVEAL ========== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 700px) {
+  .hero-right h1 {
+    font-size: 2.1rem;
+  }
+
+  .profile-pic-large {
+    width: 150px;
+    height: 150px;
+  }
+
+  .box-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

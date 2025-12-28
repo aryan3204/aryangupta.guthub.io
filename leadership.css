@@ -1,0 +1,127 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE & BACKGROUND ===== */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-image: linear-gradient(
+      rgba(5, 8, 22, 0.92),
+      rgba(5, 8, 22, 0.98)
+    ),
+    url("portfolio/images/leadership-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== HEADER ===== */
+
+.page-header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: #cbd5f5;
+}
+
+/* ===== LEADERSHIP SECTION ===== */
+
+.leadership-section {
+  padding-bottom: 3rem;
+}
+
+.lead-card {
+  margin-bottom: 1.6rem;
+  padding: 1.3rem 1.4rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.lead-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.lead-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+
+.lead-card ul {
+  list-style: disc;
+  padding-left: 1.1rem;
+}
+
+.lead-card li + li {
+  margin-top: 0.25rem;
+}
+
+/* Links wrapping headings */
+
+.lead-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lead-link:hover h2 {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+
+.page-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 1.2rem 0 1.6rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.page-footer a {
+  color: #c4d7ff;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .lead-card {
+    padding: 1.2rem 1.1rem;
+  }
+}

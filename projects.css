@@ -1,0 +1,124 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BASE + BACKGROUND */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-image: linear-gradient(
+      rgba(1, 8, 20, 0.9),
+      rgba(1, 8, 20, 0.98)
+    ),
+    url("portfolio/images/project-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* HEADER */
+.page-header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: #cbd5f5;
+}
+
+/* PROJECT CARD */
+.projects-section {
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 1.8rem 1.9rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(7, 30, 52, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+
+.project-text {
+  font-size: 0.98rem;
+  color: #d1d5db;
+  margin-bottom: 1.1rem;
+}
+
+/* BUTTON */
+.project-btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.7);
+  background: #0ea5e9;
+}
+
+/* FOOTER */
+.page-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 1.2rem 0 1.6rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.page-footer a {
+  color: #c4d7ff;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.5rem 1.4rem;
+  }
+}

@@ -1,0 +1,165 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE & BACKGROUND ===== */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-image: linear-gradient(
+      rgba(5, 8, 22, 0.92),
+      rgba(5, 8, 22, 0.98)
+    ),
+    url("portfolio/images/experience-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== HEADER ===== */
+
+.page-header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: #cbd5f5;
+}
+
+/* ===== EXPERIENCE GRID ===== */
+
+.exp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* Cards are fully clickable links */
+
+.exp-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Glassy experience card */
+
+.exp-card {
+  position: relative;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 1.5rem 1.6rem 1.9rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* Hover / focus interaction */
+
+.exp-card-link:hover .exp-card,
+.exp-card-link:focus .exp-card {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* Heading section */
+
+.exp-heading h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.role {
+  font-size: 1rem;
+  color: #c7d2fe;
+  margin-top: 0.15rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-top: 0.2rem;
+}
+
+/* Bullet points */
+
+.bullets {
+  margin-top: 0.8rem;
+  list-style: disc;
+  padding-left: 1.1rem;
+  color: #e5e7eb;
+}
+
+.bullets li + li {
+  margin-top: 0.25rem;
+}
+
+/* Tap / click hint */
+
+.tap-hint {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 0.9rem;
+  font-size: 0.75rem;
+  color: #a5b4fc;
+}
+
+/* ===== FOOTER ===== */
+
+.page-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 1.2rem 0 1.6rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.page-footer a {
+  color: #c4d7ff;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .exp-card {
+    padding: 1.4rem 1.3rem 1.8rem;
+  }
+
+  .tap-hint {
+    position: static;
+    display: block;
+    margin-top: 0.6rem;
+    text-align: left;
+  }
+}
