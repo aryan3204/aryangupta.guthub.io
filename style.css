@@ -756,3 +756,50 @@ body {
         grid-template-columns: 1fr; /* Stack on mobile */
     }
 }
+
+/* Justify description text in all cards and timeline items */
+.card-list li, 
+.card-description, 
+.project-desc, 
+.experience-list li,
+.timeline-content p {
+    text-align: justify;
+    text-justify: inter-word; /* Ensures even spacing between words */
+}
+/* Justify description text in all cards and timeline items */
+.card-list li, 
+.card-description, 
+.project-desc, 
+.experience-list li,
+.timeline-content p {
+    text-align: justify;
+    text-justify: inter-word; /* Ensures even spacing between words */
+}
+/* Justify Hero Section Intro Text */
+#home p {
+    text-align: justify;
+    text-justify: inter-word; /* Evenly distributes space between words */
+    max-width: 850px;         /* Keeps the block readable */
+    margin-left: auto;        /* Centers the justified block */
+    margin-right: auto;
+    hyphens: auto;            /* Prevents big gaps by breaking long words */
+    line-height: 1.6;         /* Improves readability for justified text */
+}
+
+/* Ensure the sub-heading stays centered and doesn't justify */
+#home h2, #home .tagline {
+    text-align: center !important;
+}
+/* Apply justification to all card content and lists */
+.card p, 
+.card-list li, 
+.timeline-content p, 
+.project-desc {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Keeps the titles and dates aligned to the left/center as per design */
+.card-title, .timeline-date {
+    text-align: left;
+}
