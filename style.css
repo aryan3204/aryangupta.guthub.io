@@ -756,7 +756,6 @@ body {
         grid-template-columns: 1fr; /* Stack on mobile */
     }
 }
-
 /* Justify description text in all cards and timeline items */
 .card-list li, 
 .card-description, 
